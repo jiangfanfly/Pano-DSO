@@ -1,0 +1,82 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "g++ multi-fisheye-release",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/bin/release/run_panodso_multi_fisheye",
+            // "args": ["preset=0", "files=/home/jiangfan/data/Ladybug/LadybugFishEyeImgSques", "calib=/home/jiangfan/data/Ladybug/LadybugFishEyeImgSques/CalibrationResult"],
+            // 
+            // "args": ["preset=0", "files=/home/jiangfan/data/Ladybug/jiejing/01_zihuanlu", "calib=/home/jiangfan/data/Ladybug/jiejing/01_zihuanlu/CalibrationResult", "loopclosing=0"],
+            "args": ["preset=0", "files=/home/jiangfan/data/Ladybug/jiejing/02_caihonghuayuanxilu", "calib=/home/jiangfan/data/Ladybug/jiejing/02_caihonghuayuanxilu/CalibrationResult", "loopclosing=0"],
+            // "args": ["preset=0", "files=/home/jiangfan/data/Ladybug/jiejing/03_wanliucundajie1", "calib=/home/jiangfan/data/Ladybug/jiejing/03_wanliucundajie1/CalibrationResult", "loopclosing=0"],
+            // "args": ["preset=0", "files=/home/jiangfan/data/Ladybug/jiejing/04_wanliucundajie2", "calib=/home/jiangfan/data/Ladybug/jiejing/04_wanliucundajie2/CalibrationResult", "loopclosing=0"],
+            // "args": ["preset=0", "files=/home/jiangfan/data/Ladybug/jiejing/05_xinhualu2", "calib=/home/jiangfan/data/Ladybug/jiejing/05_xinhualu2/CalibrationResult", "loopclosing=0"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "build-release",
+        },
+        {
+            "name": "g++ multi-fisheye-debug",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/bin/debug/run_panodso_multi_fisheye",
+            // "program": "${workspaceFolder}/bin/release/run_panodso_multi_fisheye"
+            // "args": ["preset=0", "files=/home/jiangfan/data/Ladybug/LadybugFishEyeImgSques", "calib=/home/jiangfan/data/Ladybug/LadybugFishEyeImgSques/CalibrationResult"],
+            
+            // "args": ["preset=0", "files=/home/jiangfan/data/Ladybug/jiejing/01_zihuanlu", "calib=/home/jiangfan/data/Ladybug/jiejing/01_zihuanlu/CalibrationResult", "loopclosing=0"],
+            "args": ["preset=0", "files=/home/jiangfan/data/Ladybug/jiejing/02_caihonghuayuanxilu", "calib=/home/jiangfan/data/Ladybug/jiejing/02_caihonghuayuanxilu/CalibrationResult", "loopclosing=0"],
+            // "args": ["preset=0", "files=/home/jiangfan/data/Ladybug/jiejing/03_wanliucundajie1", "calib=/home/jiangfan/data/Ladybug/jiejing/03_wanliucundajie1/CalibrationResult", "loopclosing=0"],
+            // "args": ["preset=0", "files=/home/jiangfan/data/Ladybug/jiejing/04_wanliucundajie2", "calib=/home/jiangfan/data/Ladybug/jiejing/04_wanliucundajie2/CalibrationResult", "loopclosing=0"],
+            // "args": ["preset=0", "files=/home/jiangfan/data/Ladybug/jiejing/05_xinhualu2", "calib=/home/jiangfan/data/Ladybug/jiejing/05_xinhualu2/CalibrationResult", "loopclosing=0"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "build-debug",
+        },
+        {
+            "name": "g++ kitti",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/bin/run_dso_kitti",
+            "args": ["preset=0", "files=/home/jiangfan/data/Kitti/02", "calib=./examples/Kitti/Kitti00-02.txt"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+             "preLaunchTask": "build",
+            // "miDebuggerPath": "/usr/bin/gdb"
+        }
+    ]
+}

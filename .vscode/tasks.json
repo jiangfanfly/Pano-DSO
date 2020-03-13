@@ -1,0 +1,17 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build-debug",
+            "type": "shell",
+            "command": "sh ${workspaceFolder}/make_project_debug.sh"
+        },
+        {
+            "label": "build-release",
+            "type": "shell",
+            "command": "sh ${workspaceFolder}/make_project_release.sh"
+        }
+    ]
+}
